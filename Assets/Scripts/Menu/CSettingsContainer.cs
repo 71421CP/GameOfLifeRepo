@@ -94,9 +94,17 @@ public class CSettingsContainer : MonoBehaviour
         }
     }
 
-    private void Start()
+    private void Awake()
     {
         DontDestroyOnLoad(this);
+
+        CSettingsContainer[] arr_settings = FindObjectsOfType<CSettingsContainer>();
+
+        if (arr_settings.Length > 1)    // Prevents duplicates
+        {
+            Destroy(arr_settings[1].gameObject);
+        }
+
         ResetValues();      // Set to standard values
     }
 

@@ -52,4 +52,12 @@ public class CMenuControl : MonoBehaviour
         float o = System.Convert.ToSingle(UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.GetComponent<InputField>().text);  // Conversion
         m_settings.GetType().GetProperty(_settingsProperty).SetValue(m_settings, o, null);  // Setting property value
     }
+
+    /// <summary>
+    /// Calls ResetValue on the settings container
+    /// </summary>
+    public void ResetValuesClick()
+    {
+        FindObjectOfType<CSettingsContainer>().ResetValues();
+    }
 }

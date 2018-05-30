@@ -5422,8 +5422,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1125235337}
-        m_MethodName: ResetValues
+      - m_Target: {fileID: 959996822}
+        m_MethodName: ResetValuesClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
